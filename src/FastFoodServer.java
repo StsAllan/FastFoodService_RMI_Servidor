@@ -85,7 +85,7 @@ public class FastFoodServer extends UnicastRemoteObject implements FastFoodServi
     public double processPayment(String clientName, double amountPaid) throws RemoteException {
         double change = amountPaid - totalAmount; // Calcula o troco
 
-        if (change >= 0) {
+        if (change >= totalAmount) {
             // Pagamento completo, há troco a ser dado
             // Realize aqui ações adicionais necessárias, como registrar o pagamento no sistema, imprimir o comprovante, etc.
 
